@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segunda entrega JS</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://kit.fontawesome.com/dc4e08a9cd.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-section container">
+            <img class="logo" src="./img/logo.webp" alt="">
+            <div class="search">
+                <input type="search" class="card-filter" placeholder="buscar..." id="search-item" onkeyup="search()">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <h1 class="header-title">Otaku's</h1>
+            <div>
+                <img onmouseover="showCart(this)" class="cart" src="./img/cart.png" alt="">
+                <p class="count-product">0</p>
+            </div>
+            <div class="cart-products" id="products-id">
+                <p class="close-btn" onclick="closeBtn()">X</p>
+                <h3>Mi carrito</h3>
+                <div class="card-items">
+                    <!-- items elegidos -->
+                </div>
+                <h2>Total: $<strong class="price-total">0</strong></h2>
+            </div>
+        </div>
+    </header>
+    <section class="container">
+        <div class="products" id="products">
+            <div class="carts">
+                <div>
+                    <img src="./img/manga1.webp" alt="">
+                    <p class="product__price">$<span>8000</span></p>
+                </div>
+                <h2 class="product__title">Manga SNK</h2>
+                <a href="" data-id="1" class="btn-add-cart">Añadir al carrito</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="./img/manga2.jpg" alt="">
+                    <p class="product__price">$<span>6300</span></p>
+                </div>
+                <h2 class="product__title">Manga Tokio Ghoul</h2>
+                <a href="" class="btn-add-cart" data-id="2">Añadir al carrito</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="./img/manga3.webp" alt="">
+                    <p class="product__price">$<span>6300</span></p>
+                </div>
+                <h2 class="product__title">Manga Akame Ga Kill</h2>
+                <a href="" data-id="3" class="btn-add-cart">Añadir al carrito</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="./img/manga4.webp" alt="">
+                    <p class="product__price">$<span>12000</span></p>
+                </div>
+                <h2 class="product__title">Manga Naruto</h2>
+                <a href="" data-id="4" class="btn-add-cart">Añadir al carrito</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="./img/manga5.webp" alt="">
+                    <p class="product__price">$<span>6300</span></p>
+                </div>
+                <h2 class="product__title">Manga Bleach</h2>
+                <a href="" data-id="5" class="btn-add-cart">Añadir al carrito</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="./img/manga6.webp" alt="">
+                    <p class="product__price">$<span>3400</span></p>
+                </div>
+                <h2 class="product__title">Manga One Piece</h2>
+                <a href="" data-id="6" class="btn-add-cart">Añadir al carrito</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="./img/manga7.webp" alt="">
+                    <p class="product__price">$<span>3600</span></p>
+                </div>
+                <h2 class="product__title">Manga Evangelion</h2>
+                <a href="" data-id="7" class="btn-add-cart">Añadir al carrito</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="./img/manga8.webp" alt="">
+                    <p class="product__price">$<span>6300</span></p>
+                </div>
+                <h2 class="product__title">Manga fairy tail</h2>
+                <a href="" data-id="8" class="btn-add-cart">Añadir al carrito</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="./img/manga9.webp" alt="">
+                    <p class="product__price">$<span>6300</span></p>
+                </div>
+                <h2 class="product__title">Manga Sailor Moon</h2>
+                <a href="" data-id="9" class="btn-add-cart">Añadir al carrito</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="./img/manga10.webp" alt="">
+                    <p class="product__price">$<span>8000</span></p>
+                </div>
+                <h2 class="product__title">Manga Fullmetal Alchemist</h2>
+                <a href="" data-id="10" class="btn-add-cart">Añadir al carrito</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        function showCart(x) {
+            document.getElementById("products-id").style.display = "block";
+        }
+        function closeBtn() {
+            document.getElementById("products-id").style.display = "none";
+        }
+
+    </script>
+    <script src="js/functionalidad.js"></script>
+    <script src="js/filter-search.js"></script>
+</body>
+
+</html>
