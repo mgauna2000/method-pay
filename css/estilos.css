@@ -190,3 +190,20 @@ p.close-btn{
   font-weight: 600;
   padding: 8px 10px;
 }
+.cart-products button{
+  font-family: "Inconsolata", monospace;
+  text-decoration: none;
+  background: #000;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 400;
+  cursor: pointer;
+}
+.cart-products button:hover{
+  background: #fff;
+  color: #ff4e00;
+  border: solid 2px #ff4e00;
+  transition-duration: .3s;
+}
