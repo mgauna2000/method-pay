@@ -6,17 +6,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Method Pay</title>
-    <link rel="stylesheet" href="../css/estilos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <script src="https://kit.fontawesome.com/dc4e08a9cd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/method-pay.css">
 </head>
 
 <body>
-    <div class="header-section container">
-        <img class="logo" src="../img/logo.webp" alt="">
-        <h1 class="header-title">Otaku's</h1>
+    <!-- <header>
+        <div class="header-section container">
+            <img class="logo" src="../img/logo.webp" alt="">
+            <h1 class="header-title">Otaku's</h1>
+        </div>
+    </header> -->
+
+    <div class="container-card">
+        <section class="card" id="card">
+            <div class="front">
+                <div class="logo">
+                    <img src="../img/logos/visa.png" alt="">
+                </div>
+                <img src="../img/chip-tarjeta.png" class="chip" alt="">
+                <div class="data">
+                    <div class="group" id="number">
+                        <p class="label">Número Tarjeta</p>
+                        <p class="number">#### #### #### ####</p>
+                    </div>
+                    <div class="flexbox">
+                        <div class="group" id="name">
+                            <p class="label">Nombre Tarjeta</p>
+                            <p class="name">Juan Perez</p>
+                        </div>
+                        <div class="group" id="expiration">
+                            <p class="label">Expiración</p>
+                            <p class="expiration"><span class="month">MM</span> / <span class="year">AA</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-</header>
+
+    <script src="../js/pay-card.js"></script>
+    <script src="https://kit.fontawesome.com/dc4e08a9cd.js" crossorigin="anonymous"></script>
     <!-- <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
 </body>
 
