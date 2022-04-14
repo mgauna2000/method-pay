@@ -28,6 +28,57 @@ body {
   cursor: pointer;
   z-index: 2;
 }
+.card:active {
+  transform: rotateY(180deg);
+}
+.card > div {
+  padding: 30px;
+  border-radius: 15px;
+  min-height: 315px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 10px 10px 0 rgba(90, 116, 148, 0.3);
+}
+/* parte delantera de la tarjeta */
+.card .front {
+  width: 100%;
+  background: url(../img/bg-tarjeta/bg-tarjeta-02.jpg);
+  background-size: cover;
+}
+.front .logo {
+  text-align: right;
+  min-height: 50px;
+}
+.front .logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-width: 80px;
+}
+.front .chip {
+  width: 100%;
+  max-width: 50px;
+  margin-bottom: 20px;
+}
+.front .group .label {
+  font-size: 16px;
+  color: #7d8994;
+  margin-bottom: 5px;
+}
+.front .group .number,
+.front .group .name,
+.front .group .expiration {
+  color: #fff;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+.front .flexbox {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
 
 
 
