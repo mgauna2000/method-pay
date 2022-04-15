@@ -17,6 +17,7 @@
         </div>
     </header> -->
 
+    <!-- tarjeta container -->
     <div class="container-card">
         <section class="card" id="card">
             <div class="front">
@@ -59,12 +60,49 @@
                 <a href="#" class="link-bank">www.tubanco.com</a>
             </div>
         </section>
-
+        <!-- boton del formulario -->
         <div class="container-btn">
             <button class="btn-form" id="btn-form">
                 <i class="fa-solid fa-plus"></i>
             </button>
         </div>
+
+        <!-- formulario -->
+        <form action="" id="card-form" class="card-form">
+            <div class="group">
+                <label for="inputNumber">Número Tarjeta</label>
+                <input type="text" id="inputNumber" maxlength="19" autocomplete="off">
+            </div>
+            <div class="group">
+                <label for="inputName">Nombre</label>
+                <input type="text" id="inputName" maxlength="19" autocomplete="off">
+            </div>
+            <div class="flexbox">
+                <div class="group expires">
+                    <label for="selectMonth">Expiración</label>
+                    <div class="flexbox">
+                       <div class="group-select">
+                           <select name="month" id="selectMonth">
+                               <option disabled selected>Mes</option>
+                           </select>
+                           <i class="fa-solid fa-angle-down"></i>
+                       </div>
+                       <div class="group-select">
+                        <select name="year" id="selectYear">
+                            <option disabled selected>Año</option>
+                        </select>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="group ccv">
+                    <label for="inputCCV">CCV</label>
+                    <input type="text" id="inputCCV" maxlength="3">
+                </div>
+            </div>
+            <button type="submit" class="btn-submit">Enviar</button>
+        </form>
     </div>
 
     <script src="../js/pay-card.js"></script>
