@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Liu+Jian+Mao+Cao&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Liu+Jian+Mao+Cao&display=swap');
 
 * {
   padding: 0;
@@ -162,7 +162,22 @@ body {
 .container-btn .btn-form.active {
   transform: rotate(45deg);
 }
-
+/* formulario de la tarjeta */
+.card-form {
+  background: #fff;
+  width: 100%;
+  max-width: 700px;
+  padding: 150px 30px 30px 30px;
+  border-radius: 10px;
+  position: relative;
+  top: -150px;
+  z-index: 1;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  transition: clip-path .3s ease-out;
+}
+.card-form.active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
 
 
 
