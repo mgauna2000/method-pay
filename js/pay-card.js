@@ -29,3 +29,16 @@ for(let i = currentYear; i <= currentYear + 8; i++) {
     option.innerText = i;
     form.selectYear.appendChild(option);
 }
+// numero de tarjeta
+form.inputNumber.addEventListener("keyup", (e) => {
+    let valueInput = e.target.value;
+    form.inputNumber.value = valueInput
+    //eliminamos espacios en blanco
+    .replace(/\s/g, '')
+	// eliminamos las letras
+	.replace(/\D/g, '')
+	// agregamos espacios cada cuatro numeros
+	.replace(/([0-9]{4})/g, '$1 ')
+	// eliminamos el ultimo espaciado
+	.trim();
+})
