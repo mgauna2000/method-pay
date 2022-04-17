@@ -1,6 +1,9 @@
 const card = document.querySelector("#card");
 const btnOpenForm = document.querySelector("#btn-form");
 const form = document.querySelector("#card-form");
+const numberCard = document.querySelector("#card .number");
+const nameCard = document.querySelector("#card .name");
+const logo = document.querySelector("#logo");
 
 card.addEventListener("click", () => {
     card.classList.toggle("active");
@@ -33,7 +36,7 @@ for(let i = currentYear; i <= currentYear + 8; i++) {
 form.inputNumber.addEventListener("keyup", (e) => {
     let valueInput = e.target.value;
     form.inputNumber.value = valueInput
-    //eliminamos espacios en blanco
+    //eliminamos espacios en blanco usando una exprecion regular
     .replace(/\s/g, '')
 	// eliminamos las letras
 	.replace(/\D/g, '')
@@ -41,4 +44,28 @@ form.inputNumber.addEventListener("keyup", (e) => {
 	.replace(/([0-9]{4})/g, '$1 ')
 	// eliminamos el ultimo espaciado
 	.trim();
-})
+
+    numberCard.textContent = valueInput;
+    
+    if(valueInput == '') {
+        numberCard.textContent = "#### #### #### ####";
+
+        logo.innerHTML = '';
+    }
+    // si el numero de tarjeta empieza con 4 se muestra el logo de visa
+    if(valueInput[0] == 4) {
+        //reiniciamos el logo que tengamos
+        logo.innerHTML = '';
+        //agregamos una imagen
+        const image = document.createElement("img");
+        //agregamos la ruta de la imagen
+        image.src = "../img/logos/visa.png";
+        //lo agregamos como elemento hijo
+        logo.appendChild(image);
+    } else if(valueInput[0] == 5) {
+        logo.innerHTML = '';
+        const image = document.createElement("img");
+        image.src = "../img/logos/mastercard.png";
+        logo.appendChild(image);
+    }
+});
