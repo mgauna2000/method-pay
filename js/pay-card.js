@@ -1,5 +1,6 @@
 const card = document.querySelector("#card");
 const btnOpenForm = document.querySelector("#btn-form");
+const form = document.querySelector("#card-form");
 
 card.addEventListener("click", () => {
     card.classList.toggle("active");
@@ -7,4 +8,5 @@ card.addEventListener("click", () => {
 
 btnOpenForm.addEventListener("click", () => {
     btnOpenForm.classList.toggle("active");
+    form.classList.toggle("active");
 });
