@@ -1,0 +1,32 @@
+[
+    {
+      "nombre": "Kakegurui",
+      "info": "Una nueva estudiante llega a la escuela con una gran obsesión y destreza en los juegos de apuestas. La chica llamada Yumeko está acompañada por Suzui en cada juego y a pesar de perder dinero, incluso con las trampas de los otros oponentes, a Yumeko solo le guía el éxtasis y riesgo de apostar.",
+      "imagen": "img/newProduct/img.jpg"
+    },
+    {
+      "nombre": "Komi-san",
+      "info": "Komi-san no puede comunicarse es una serie anime que sigue la historia de Shouko Komi y su primer día asistiendo al instituto de élite Itan Private. Allí recibe inmediatamente una gran acogida, convirtiéndola en popular en segundos por su belleza estoica sin precedentes.",
+      "imagen": "img/newProduct/img1.jpg"
+    },
+    {
+      "nombre": "Goblin Slayer",
+      "info": "Una sacerdotisa inexperta se une a una aventura junto a un grupo de novatos, pero entra en peligro después de que todos sus compañeros caen en combate contra los goblins, pero ella es salvada por un hombre conocido como Goblin Slayer, un aventurero cuyo único propósito es la erradicación de los goblins.",
+      "imagen": "img/newProduct/img3.jpg"
+    },
+    {
+      "nombre": "Black Clover",
+      "info": "Black Clover sigue la historia de dos chicos, Asta y Yuno, que crecen en un orfanato de la iglesia de Hage, ubicada en el Reino del Trébol. Ambos se han criado en un mundo donde todas las personas tienen la habilidad de manipular el Poder Mágico.",
+      "imagen": "img/newProduct/img4.jpg"
+    },
+    {
+     "nombre": "My Hero Academia5",
+     "info": "La historia tiene lugar en un mundo donde el 80% de la población ha desarrollado «dones», surgiendo así héroes y villanos. Entre el 20% de personas sin dones, se encuentra Izuku Midoriya, cuyo mayor deseo es poder estudiar en la U.A. y convertirse en un héroe como su ídolo All Might.",
+     "imagen": "img/newProduct/img.jpg"
+    },
+    {
+      "nombre": "Jujutsu Kaisen",
+      "info": "Jujutsu Kaisen es un anime que sigue la historia de Yuji Itadori, un estudiante de secundaria que vive en Sendai junto a su abuelo. Aunque tenga un talento innato para el deporte, evita de todas formas el equipo de pista debido a su aversión al atletismo.",
+      "imagen": "img/newProduct/img2.jpg"
+    }
+  ]

@@ -3,10 +3,29 @@ let allContainerCart = document.querySelector(".products");
 let containerBuyCart = document.querySelector(".card-items");
 let priceTotal = document.querySelector('.price-total');
 let amountProduct = document.querySelector('.count-product');
+let list = document.querySelector('#list');
 
 let buyThings = [];
 let totalCard = 0;
 let countProduct = 0;
+
+// agregamos los proximos productos con fetch
+const requestData = async () => {
+  const res = await
+  fetch("./nextProducts.json")
+  const data = await res.json()
+
+  data.forEach((post) => {
+    const listProducts = document.createElement("li");
+    listProducts.innerHTML = `
+    <img src=${post.imagen} alt="">
+    <h3>${post.nombre}</h3>
+    <p>${post.info}</p>
+    `;
+    list.append(listProducts);
+  })
+}
+requestData();
 
 //funciones
 loadEventListeners();

@@ -191,7 +191,7 @@ p.close-btn{
   padding: 8px 10px;
 }
 .cart-products button{
-  font-family: "Inconsolata", monospace;
+  /* font-family: "Inconsolata", monospace;
   text-decoration: none;
   background: #000;
   color: #fff;
@@ -199,12 +199,48 @@ p.close-btn{
   font-size: 15px;
   text-transform: uppercase;
   font-weight: 500;
+  cursor: pointer; */
+  border: none;
+  padding: 8px;
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #fff;
+  background: #192538;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px 0px rgba(0, 85, 212, 0.4);
   cursor: pointer;
 }
 .cart-products button:hover{
-  background: #fff;
+  /* background: #fff;
   color: #2c6117;
   border: solid 2px #2c6117;
   font-weight: 500;
-  transition-duration: .3s;
+  transition-duration: .3s; */
+  background: #1850b1;
+}
+/* proximos productos */
+.upcoming-products img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+.upcoming-products h2 {
+  font-size: 40px;
+  padding-top: 40px;
+  font-family: "Inconsolata", monospace;
+  font-weight: 600;
+  text-transform: capitalize;
+  text-decoration: underline;
+}
+.upcoming-products h3 {
+  font-size: 24px;
+  font-family: "Poppins", sans-serif;
+}
+.upcoming-products p {
+  font-size: 18px;
+  padding: 5px;
+  font-family: "Inconsolata", monospace;
+}
+.upcoming-products li {
+  list-style: none;
 }
