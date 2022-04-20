@@ -4,6 +4,7 @@ let containerBuyCart = document.querySelector(".card-items");
 let priceTotal = document.querySelector('.price-total');
 let amountProduct = document.querySelector('.count-product');
 let list = document.querySelector('#list');
+let btnPay = document.querySelector('.btn-pay');
 // const valueTotal = document.querySelector("#total").textContent;
 
 let buyThings = [];
@@ -140,6 +141,21 @@ function loadHtml() {
     amountProduct.innerHTML = countProduct;
   });
 }
+
+btnPay.addEventListener("click", () => {
+  fetch('./totalPrice.json', {
+    method: "POST",
+    body: JSON.stringify({
+      precio: totalCard.textContent,
+    }),
+    headers: {
+      "Content-type": "aplication/json"
+    },
+  })
+  .then((res) => res.json())
+  .then((data) => console.log(data))
+});
+
 
 function clearHtml() {
   containerBuyCart.innerHTML = "";
