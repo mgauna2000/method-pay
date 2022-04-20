@@ -4,6 +4,7 @@ let containerBuyCart = document.querySelector(".card-items");
 let priceTotal = document.querySelector('.price-total');
 let amountProduct = document.querySelector('.count-product');
 let list = document.querySelector('#list');
+// const valueTotal = document.querySelector("#total").textContent;
 
 let buyThings = [];
 let totalCard = 0;
@@ -26,6 +27,8 @@ const requestData = async () => {
   })
 }
 requestData();
+
+
 
 //funciones
 loadEventListeners();
@@ -131,6 +134,8 @@ function loadHtml() {
     containerBuyCart.appendChild(row);
 
     priceTotal.innerHTML = totalCard;
+
+    console.log(totalCard);
 
     amountProduct.innerHTML = countProduct;
   });

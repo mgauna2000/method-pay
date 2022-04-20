@@ -9,8 +9,6 @@ const monthExpiration = document.querySelector("#card .month");
 const yearExpiration = document.querySelector("#card .year");
 const ccv = document.querySelector("#card .ccv");
 
-const valueTotal= document.querySelector(".price-total");
-
 card.addEventListener("click", () => {
     card.classList.toggle("active");
 });
@@ -48,7 +46,7 @@ for(let i = currentYear; i <= currentYear + 8; i++) {
 }
 //select de cuotas
 // for(let i = )
-console.log(valueTotal);
+
 
 // numero de tarjeta
 form.inputNumber.addEventListener("keyup", (e) => {
@@ -131,5 +129,3 @@ form.inputCCV.addEventListener("keyup", (e) => {
 
      ccv.textContent = form.inputCCV.value;
 });
-
-//cuotas
