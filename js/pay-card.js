@@ -46,6 +46,10 @@ for(let i = currentYear; i <= currentYear + 8; i++) {
     option.innerText = i;
     form.selectYear.appendChild(option);
 }
+//select de cuotas
+// for(let i = )
+console.log(valueTotal);
+
 // numero de tarjeta
 form.inputNumber.addEventListener("keyup", (e) => {
     let valueInput = e.target.value;
@@ -127,3 +131,5 @@ form.inputCCV.addEventListener("keyup", (e) => {
 
      ccv.textContent = form.inputCCV.value;
 });
+
+//cuotas
