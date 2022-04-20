@@ -236,6 +236,9 @@ body {
 .card-form .group-select:hover {
   color: #93bfed;
 }
+.card-form .dues {
+  margin-bottom: 20px;
+}
 .card-form .btn-submit {
   border: none;
   padding: 10px;

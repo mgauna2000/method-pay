@@ -9,6 +9,8 @@ const monthExpiration = document.querySelector("#card .month");
 const yearExpiration = document.querySelector("#card .year");
 const ccv = document.querySelector("#card .ccv");
 
+const valueTotal= document.querySelector(".price-total");
+
 card.addEventListener("click", () => {
     card.classList.toggle("active");
 });
