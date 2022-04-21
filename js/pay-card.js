@@ -45,7 +45,14 @@ for(let i = currentYear; i <= currentYear + 8; i++) {
     form.selectYear.appendChild(option);
 }
 //select de cuotas
-// for(let i = )
+const totalBuy = localStorage.getItem("total");
+console.log(totalBuy);
+for(let i = 1; i <= 3; i++) {
+    let option = document.createElement("option");
+    option.value = i;
+    option.innerText = `${i} + ${totalBuy}`;
+    form.selectDues.appendChild(option);
+}
 
 
 // numero de tarjeta

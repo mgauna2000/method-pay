@@ -88,10 +88,6 @@ function readTheContent(product) {
     id: product.querySelector("a").getAttribute("data-id"),
     amount: 1
   }
-  //almacenamos los productos en el localStorage
-  const becomeJson = JSON.stringify(buyThings);
-  localStorage.setItem("productos", becomeJson);
-  console.log(localStorage);
   //cada que añadamos un producto lo sumamos
   totalCard = parseFloat(totalCard) + parseFloat(infoProduct.price);
   totalCard = totalCard.toFixed(2);
@@ -143,17 +139,21 @@ function loadHtml() {
 }
 
 btnPay.addEventListener("click", () => {
-  fetch('./totalPrice.json', {
-    method: "POST",
-    body: JSON.stringify({
-      precio: totalCard.textContent,
-    }),
-    headers: {
-      "Content-type": "aplication/json"
-    },
-  })
-  .then((res) => res.json())
-  .then((data) => console.log(data))
+  //almacenamos los productos en el localStorage
+  const becomeJson = JSON.stringify(totalCard);
+  localStorage.setItem("total", becomeJson);
+  console.log(localStorage);
+  // fetch('./totalPrice.json', {
+  //   method: "POST",
+  //   body: JSON.stringify({
+  //     precio: totalCard.textContent,
+  //   }),
+  //   headers: {
+  //     "Content-type": "aplication/json"
+  //   },
+  // })
+  // .then((res) => res.json())
+  // .then((data) => console.log(data))
 });
 
 
