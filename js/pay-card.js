@@ -53,7 +53,7 @@ let optionsCuotas = [ 1, 3, 6, 12 ];
 for(let i = 0; i < optionsCuotas.length; i++) {
     let option = document.createElement("option");
     let precioTotalCuotas =  totalBuy / optionsCuotas[i];
-    console.log(precioTotalCuotas);
+    console.log(precioTotalCuotas.toFixed(2));
     option.value = i;
     option.innerText = `${optionsCuotas[i]} pagos de $${precioTotalCuotas.toFixed(2)}`;
     form.selectDues.appendChild(option);
