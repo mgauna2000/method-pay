@@ -45,15 +45,21 @@ for(let i = currentYear; i <= currentYear + 8; i++) {
     form.selectYear.appendChild(option);
 }
 //select de cuotas
-const totalBuy = localStorage.getItem("total");
+const totalBuy = JSON.parse(localStorage.getItem("total"));
 console.log(totalBuy);
-for(let i = 1; i <= 3; i++) {
+
+let optionsCuotas = [ 1, 3, 6, 12 ];
+
+for(let i = 0; i < optionsCuotas.length; i++) {
     let option = document.createElement("option");
+    let precioTotalCuotas =  totalBuy / optionsCuotas[i];
+    console.log(precioTotalCuotas);
     option.value = i;
-    option.innerText = `${i} + ${totalBuy}`;
+    option.innerText = `${optionsCuotas[i]} pagos de $${precioTotalCuotas.toFixed(2)}`;
     form.selectDues.appendChild(option);
 }
 
+        
 
 // numero de tarjeta
 form.inputNumber.addEventListener("keyup", (e) => {
@@ -136,3 +142,19 @@ form.inputCCV.addEventListener("keyup", (e) => {
 
      ccv.textContent = form.inputCCV.value;
 });
+
+// let optionsCuotas = [ 1, 3, 6, 12 ];
+//         for (var i = 0; i < optionsCuotas.length; i++) {
+//             funcionCuotas(totalBuy, i, optionsCuotas[i])
+//         }
+
+//      let funcionCuotas = (precioTotal, indice, cantidadDeCuotas) => {
+//             let option = document.createElement("option");
+//             let precioTotalParaCuotas = precioTotal / cantidadDeCuotas;
+//             let value = cantidadDeCuotas + '_' + precioTotalParaCuotas.toFixed(2);
+//             let concatenacionHMLT = cantidadDeCuotas + ' Pagos de $ ' + precioTotalParaCuotas.toFixed(2);
+//             let concatenacionSelector = '.cuotas option:nth-child(' + ( indice + 1 ) + ')';
+//             option.value = value;
+//             option.innerText = concatenacionHMLT;
+//             form.selectDues.appendChild(option);
+//      };
