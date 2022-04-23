@@ -5,7 +5,6 @@ let priceTotal = document.querySelector('.price-total');
 let amountProduct = document.querySelector('.count-product');
 let list = document.querySelector('#list');
 let btnPay = document.querySelector('.btn-pay');
-// const valueTotal = document.querySelector("#total").textContent;
 
 let buyThings = [];
 let totalCard = 0;

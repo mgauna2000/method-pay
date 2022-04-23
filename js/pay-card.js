@@ -10,6 +10,10 @@ const yearExpiration = document.querySelector("#card .year");
 const ccv = document.querySelector("#card .ccv");
 const btnSubmit = document.querySelector(".btn-submit");
 
+// para los inputs
+const inputNumberCard = document.querySelector("#inputNumber");
+const inputNameCard = document.querySelector("#inputName");
+
 card.addEventListener("click", () => {
     card.classList.toggle("active");
 });
@@ -19,18 +23,6 @@ btnOpenForm.addEventListener("click", () => {
     form.classList.toggle("active");
 });
 
-const sentForm = () => {
-    e.preventDefault();
-    Swal.fire({
-        position: 'top-end',
-        icon: 'success',
-        title: 'Your work has been saved',
-        showConfirmButton: false,
-        timer: 1500
-      })
-}
-
-btnSubmit.addEventListener("click", sentForm);
 
 // mostramos el frente de la tarjeta
 const seeFront = () => {
@@ -156,6 +148,26 @@ form.inputCCV.addEventListener("keyup", (e) => {
 
      ccv.textContent = form.inputCCV.value;
 });
+
+const sendForm = () => {
+    if(inputNumberCard.value == "" || inputNameCard == "") {
+        alert(
+            "Ingrese correctamente los datos y acepte los terminos y condiciones!"
+          );
+    } else {
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Your work has been saved',
+            showConfirmButton: false,
+            timer: 3000
+          })
+    }
+    // hacer que al apretar se guarde en un array la info del formulario
+    // y que le muestre un mensaje que la compra fue realizada correctamente
+}
+
+btnSubmit.addEventListener("click", sendForm);
 
 // let optionsCuotas = [ 1, 3, 6, 12 ];
 //         for (var i = 0; i < optionsCuotas.length; i++) {

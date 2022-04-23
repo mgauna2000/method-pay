@@ -9,7 +9,7 @@ body {
   background-color: #e4e4e8;
   font-family: 'Lato',sans-serif;
 }
-header{
+/* header{
   background-color: #e4e4e8;
   padding-top: 18px;
   padding-bottom: 18px;
@@ -61,7 +61,7 @@ header{
   width: 227px;
   height: 124px;
   transition-duration: .5s;
-}
+} */
 .container-card {
   width: 90%;
   max-width: 1000px;
