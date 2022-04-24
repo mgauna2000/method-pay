@@ -15,6 +15,8 @@ let inputNumberCard = document.querySelector("#inputNumber");
 let inputNameCard = document.querySelector("#inputName");
 let select = document.querySelector("#selectDues");
 
+let dataForm = [];
+
 card.addEventListener("click", () => {
     card.classList.toggle("active");
 });
@@ -150,7 +152,7 @@ form.inputCCV.addEventListener("keyup", (e) => {
      ccv.textContent = form.inputCCV.value;
 });
 
-const dataForm = [];
+
 
 const sendForm = (e) => {
     e.preventDefault;
@@ -162,12 +164,13 @@ const sendForm = (e) => {
             dataForm.push({
                 nombre: inputNameCard.value,
                 numeroDeTarjeta: inputNumberCard.value,
-                cuotas: select.value,
             });
-            console.log(dataForm);
-        }
+            console.log(JSON.stringify(dataForm));
+            alert("Compra exitosa!");
+            // solucionar que al expandirse el formulario deje enviar los datos
+        };
     // hacer que al apretar se guarde en un array la info del formulario
     // y que le muestre un mensaje que la compra fue realizada correctamente
-}
+};
 
-btnSubmit.addEventListener("click", sendForm);
+form.addEventListener("submit", sendForm);
