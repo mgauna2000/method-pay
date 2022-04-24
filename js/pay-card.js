@@ -8,11 +8,12 @@ const signature = document.querySelector("#card .signature p");
 const monthExpiration = document.querySelector("#card .month");
 const yearExpiration = document.querySelector("#card .year");
 const ccv = document.querySelector("#card .ccv");
-const btnSubmit = document.querySelector(".btn-submit");
+const btnSubmit = document.querySelector("#btn-submit");
 
 // para los inputs
-const inputNumberCard = document.querySelector("#inputNumber");
-const inputNameCard = document.querySelector("#inputName");
+let inputNumberCard = document.querySelector("#inputNumber");
+let inputNameCard = document.querySelector("#inputName");
+let select = document.querySelector("#selectDues");
 
 card.addEventListener("click", () => {
     card.classList.toggle("active");
@@ -149,38 +150,24 @@ form.inputCCV.addEventListener("keyup", (e) => {
      ccv.textContent = form.inputCCV.value;
 });
 
-const sendForm = () => {
-    if(inputNumberCard.value == "" || inputNameCard == "") {
+const dataForm = [];
+
+const sendForm = (e) => {
+    e.preventDefault;
+    if(inputNumberCard.value == "" || inputNameCard.value == "") {
         alert(
             "Ingrese correctamente los datos y acepte los terminos y condiciones!"
           );
-    } else {
-        Swal.fire({
-            position: 'top-end',
-            icon: 'success',
-            title: 'Your work has been saved',
-            showConfirmButton: false,
-            timer: 3000
-          })
-    }
+        } else {
+            dataForm.push({
+                nombre: inputNameCard.value,
+                numeroDeTarjeta: inputNumberCard.value,
+                cuotas: select.value,
+            });
+            console.log(dataForm);
+        }
     // hacer que al apretar se guarde en un array la info del formulario
     // y que le muestre un mensaje que la compra fue realizada correctamente
 }
 
 btnSubmit.addEventListener("click", sendForm);
-
-// let optionsCuotas = [ 1, 3, 6, 12 ];
-//         for (var i = 0; i < optionsCuotas.length; i++) {
-//             funcionCuotas(totalBuy, i, optionsCuotas[i])
-//         }
-
-//      let funcionCuotas = (precioTotal, indice, cantidadDeCuotas) => {
-//             let option = document.createElement("option");
-//             let precioTotalParaCuotas = precioTotal / cantidadDeCuotas;
-//             let value = cantidadDeCuotas + '_' + precioTotalParaCuotas.toFixed(2);
-//             let concatenacionHMLT = cantidadDeCuotas + ' Pagos de $ ' + precioTotalParaCuotas.toFixed(2);
-//             let concatenacionSelector = '.cuotas option:nth-child(' + ( indice + 1 ) + ')';
-//             option.value = value;
-//             option.innerText = concatenacionHMLT;
-//             form.selectDues.appendChild(option);
-//      };
