@@ -13,7 +13,6 @@ const btnSubmit = document.querySelector("#btn-submit");
 // para los inputs
 let inputNumberCard = document.querySelector("#inputNumber");
 let inputNameCard = document.querySelector("#inputName");
-let select = document.querySelector("#selectDues");
 
 let dataForm = [];
 
@@ -167,11 +166,9 @@ const sendForm = (e) => {
             });
             console.log(JSON.stringify(dataForm));
             alert("Compra exitosa!");
-            window.location.href = "./index.html";
             // solucionar que al expandirse el formulario deje enviar los datos
         };
     // hacer que al apretar se guarde en un array la info del formulario
     // y que le muestre un mensaje que la compra fue realizada correctamente
 };
-console.log(dataForm);
 form.addEventListener("submit", sendForm);
