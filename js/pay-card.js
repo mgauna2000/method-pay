@@ -167,6 +167,7 @@ const sendForm = (e) => {
             });
             console.log(JSON.stringify(dataForm));
             alert("Compra exitosa!");
+            location.href = "../index.html";
             // solucionar que al expandirse el formulario deje enviar los datos
         };
     // hacer que al apretar se guarde en un array la info del formulario
