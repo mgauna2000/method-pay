@@ -13,6 +13,9 @@ const btnSubmit = document.querySelector("#btn-submit");
 // para los inputs
 let inputNumberCard = document.querySelector("#inputNumber");
 let inputNameCard = document.querySelector("#inputName");
+let selectMonthValue = document.querySelector("#selectMonth");
+let selectYearValue = document.querySelector("#selectYear");
+let selectDuesValue = document.querySelector("#selectDues");
 
 let dataForm = [];
 
@@ -41,6 +44,11 @@ for(let i = 1; i <= 12; i++) {
     option.innerText = i;
     form.selectMonth.appendChild(option);
 }
+
+function monthOption() {
+    let monthSelect = selectMonthValue.options[selectMonthValue.selectedIndex].value;
+    console.log(monthSelect);
+}
 // select del año dinamicamente
 
 // guardamos el año actual dentro de una variable
@@ -52,6 +60,12 @@ for(let i = currentYear; i <= currentYear + 8; i++) {
     option.innerText = i;
     form.selectYear.appendChild(option);
 }
+
+function yearOption() {
+    let yearSelect = selectYearValue.options[selectYearValue.selectedIndex].value;
+    console.log(yearSelect);
+}
+
 //select de cuotas
 const totalBuy = JSON.parse(localStorage.getItem("total"));
 console.log(totalBuy);
@@ -67,7 +81,10 @@ for(let i = 0; i < optionsCuotas.length; i++) {
     form.selectDues.appendChild(option);
 }
 
-        
+function duesOption() {
+    let duesSelect = selectDuesValue.options[selectDuesValue.selectedIndex].textContent;
+    console.log(duesSelect);
+}       
 
 // numero de tarjeta
 form.inputNumber.addEventListener("keyup", (e) => {

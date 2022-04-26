@@ -83,13 +83,13 @@
                     <label for="selectMonth">Expiración</label>
                     <div class="flexbox">
                        <div class="group-select">
-                           <select name="month" id="selectMonth">
+                           <select name="month" id="selectMonth" onchange="monthOption()">
                                <option disabled selected>Mes</option>
                            </select>
                            <i class="fa-solid fa-angle-down"></i>
                        </div>
                        <div class="group-select">
-                        <select name="year" id="selectYear">
+                        <select name="year" id="selectYear" onchange="yearOption()">
                             <option disabled selected>Año</option>
                         </select>
                         <i class="fa-solid fa-angle-down"></i>
@@ -103,7 +103,7 @@
                 </div>
             </div>
             <div class="group-select dues">
-                <select name="dues" id="selectDues">
+                <select name="dues" id="selectDues" onchange="duesOption()">
                     <option disabled selected>Cuotas a elegir</option>
                 </select>
                 <i class="fa-solid fa-angle-down"></i>
