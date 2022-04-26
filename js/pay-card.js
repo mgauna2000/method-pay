@@ -46,7 +46,7 @@ for(let i = 1; i <= 12; i++) {
 }
 
 function monthOption() {
-    let monthSelect = selectMonthValue.options[selectMonthValue.selectedIndex].value;
+    const monthSelect = selectMonthValue.options[selectMonthValue.selectedIndex].value;
     console.log(monthSelect);
 }
 // select del año dinamicamente
@@ -62,7 +62,7 @@ for(let i = currentYear; i <= currentYear + 8; i++) {
 }
 
 function yearOption() {
-    let yearSelect = selectYearValue.options[selectYearValue.selectedIndex].value;
+    const yearSelect = selectYearValue.options[selectYearValue.selectedIndex].value;
     console.log(yearSelect);
 }
 
@@ -82,7 +82,7 @@ for(let i = 0; i < optionsCuotas.length; i++) {
 }
 
 function duesOption() {
-    let duesSelect = selectDuesValue.options[selectDuesValue.selectedIndex].textContent;
+    const duesSelect = selectDuesValue.options[selectDuesValue.selectedIndex].textContent;
     console.log(duesSelect);
 }       
 
