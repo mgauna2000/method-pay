@@ -45,10 +45,10 @@ for(let i = 1; i <= 12; i++) {
     form.selectMonth.appendChild(option);
 }
 
-function monthOption() {
-    const monthSelect = selectMonthValue.options[selectMonthValue.selectedIndex].value;
-    console.log(monthSelect);
-}
+// function monthOption() {
+//     const monthSelect = selectMonthValue.options[selectMonthValue.selectedIndex].value;
+//     console.log(monthSelect);
+// }
 // select del año dinamicamente
 
 // guardamos el año actual dentro de una variable
@@ -61,10 +61,10 @@ for(let i = currentYear; i <= currentYear + 8; i++) {
     form.selectYear.appendChild(option);
 }
 
-function yearOption() {
-    const yearSelect = selectYearValue.options[selectYearValue.selectedIndex].value;
-    console.log(yearSelect);
-}
+// function yearOption() {
+//     const yearSelect = selectYearValue.options[selectYearValue.selectedIndex].value;
+//     console.log(yearSelect);
+// }
 
 //select de cuotas
 const totalBuy = JSON.parse(localStorage.getItem("total"));
@@ -81,10 +81,10 @@ for(let i = 0; i < optionsCuotas.length; i++) {
     form.selectDues.appendChild(option);
 }
 
-function duesOption() {
-    const duesSelect = selectDuesValue.options[selectDuesValue.selectedIndex].textContent;
-    console.log(duesSelect);
-}       
+// function duesOption() {
+//     const duesSelect = selectDuesValue.options[selectDuesValue.selectedIndex].textContent;
+//     console.log(duesSelect);
+// }       
 
 // numero de tarjeta
 form.inputNumber.addEventListener("keyup", (e) => {
@@ -178,8 +178,11 @@ const sendForm = (e) => {
           );
         } else {
             dataForm.push({
-                nombre: inputNameCard.value,
-                numeroDeTarjeta: inputNumberCard.value,
+                "nombre": inputNameCard.value,
+                "numeroDeTarjeta": inputNumberCard.value,
+                "mes": selectMonthValue.options[selectMonthValue.selectedIndex].value,
+                "año": selectYearValue.options[selectYearValue.selectedIndex].value,
+                "cuotas": selectDuesValue.options[selectDuesValue.selectedIndex].textContent,
             });
             console.log(JSON.stringify(dataForm));
             alert("Compra exitosa!");
