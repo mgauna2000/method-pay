@@ -17,7 +17,7 @@ let selectMonthValue = document.querySelector("#selectMonth");
 let selectYearValue = document.querySelector("#selectYear");
 let selectDuesValue = document.querySelector("#selectDues");
 
-let dataForm = [];
+const dataForm = [];
 
 card.addEventListener("click", () => {
     card.classList.toggle("active");
@@ -185,7 +185,9 @@ const sendForm = (e) => {
                 "cuotas": selectDuesValue.options[selectDuesValue.selectedIndex].textContent,
             });
             console.log(JSON.stringify(dataForm));
-            alert("Compra exitosa!");
+            for(const info of dataForm) {
+                alert(`compra Exitosa ${info.nombre}`)
+            }
             // solucionar que al expandirse el formulario deje enviar los datos
         };
     // hacer que al apretar se guarde en un array la info del formulario
