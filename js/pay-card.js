@@ -28,6 +28,11 @@ btnOpenForm.addEventListener("click", () => {
     form.classList.toggle("active");
 });
 
+btnSubmit.addEventListener("click", () => {
+    window.location.href = "http://127.0.0.1:5500/index.html";
+    localStorage.clear();
+})
+
 
 // mostramos el frente de la tarjeta
 const seeFront = () => {
@@ -186,7 +191,7 @@ const sendForm = (e) => {
             });
             console.log(JSON.stringify(dataForm));
             for(const info of dataForm) {
-                alert(`Felicidades ${info.nombre} su compre fue realizada con exito!! en ${info.cuotas} con la tarjeta número: **** - **** - **** - ${info.numeroDeTarjeta}
+                alert(`Felicidades ${info.nombre} su compra fue realizada con exito!! en ${info.cuotas} con la tarjeta número: **** - **** - **** - ${info.numeroDeTarjeta}
                 `)
             }
             // solucionar que al expandirse el formulario deje enviar los datos
