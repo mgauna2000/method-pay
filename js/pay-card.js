@@ -179,14 +179,15 @@ const sendForm = (e) => {
         } else {
             dataForm.push({
                 "nombre": inputNameCard.value,
-                "numeroDeTarjeta": inputNumberCard.value,
+                "numeroDeTarjeta": inputNumberCard.value.substr(15),
                 "mes": selectMonthValue.options[selectMonthValue.selectedIndex].value,
                 "año": selectYearValue.options[selectYearValue.selectedIndex].value,
                 "cuotas": selectDuesValue.options[selectDuesValue.selectedIndex].textContent,
             });
             console.log(JSON.stringify(dataForm));
             for(const info of dataForm) {
-                alert(`compra Exitosa ${info.nombre}`)
+                alert(`Felicidades ${info.nombre} su compre fue realizada con exito!! en ${info.cuotas} con la tarjeta número: **** - **** - **** - ${info.numeroDeTarjeta}
+                `)
             }
             // solucionar que al expandirse el formulario deje enviar los datos
         };
