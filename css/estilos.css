@@ -219,15 +219,21 @@ p.close-btn{
   background: #1850b1;
 }
 /* proximos productos */
+.upcoming-products #list{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
 .upcoming-products img {
   width: 150px;
   height: 150px;
   object-fit: cover;
 }
 .upcoming-products h2 {
+  color: #454546;
   font-size: 40px;
-  padding-top: 40px;
-  font-family: "Inconsolata", monospace;
+  margin: 70px 0px;
+  /* padding-top: 10px; */
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
   text-transform: capitalize;
   text-decoration: underline;
