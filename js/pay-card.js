@@ -31,9 +31,10 @@ btnOpenForm.addEventListener("click", () => {
 btnSubmit.addEventListener("click", () => {
     // usando go live por la url
     window.location.href = "../index.html";
+    // http://127.0.0.1:5500/index.html
     localStorage.clear();
 })
-// http://127.0.0.1:5500/index.html
+
 
 // mostramos el frente de la tarjeta
 const seeFront = () => {
