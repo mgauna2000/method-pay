@@ -1,3 +1,6 @@
+// este el archivo que iba usar cuando apenas empezo el curso pero fui cambiando
+// cosas y adaptandome a nuevas herramientas para mejorar el trabajo final
+
 const productoMangas = document.querySelectorAll('.product__icon');
 const productoPops = document.querySelectorAll('.btn-compra');
 const usuario = document.querySelector('.user');

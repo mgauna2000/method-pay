@@ -11,11 +11,11 @@ const ccv = document.querySelector("#card .ccv");
 const btnSubmit = document.querySelector("#btn-submit");
 
 // para los inputs
-let inputNumberCard = document.querySelector("#inputNumber");
-let inputNameCard = document.querySelector("#inputName");
-let selectMonthValue = document.querySelector("#selectMonth");
-let selectYearValue = document.querySelector("#selectYear");
-let selectDuesValue = document.querySelector("#selectDues");
+const inputNumberCard = document.querySelector("#inputNumber");
+const inputNameCard = document.querySelector("#inputName");
+const selectMonthValue = document.querySelector("#selectMonth");
+const selectYearValue = document.querySelector("#selectYear");
+const selectDuesValue = document.querySelector("#selectDues");
 
 const dataForm = [];
 
@@ -29,6 +29,7 @@ btnOpenForm.addEventListener("click", () => {
 });
 
 btnSubmit.addEventListener("click", () => {
+    // usando go live por la url
     window.location.href = "http://127.0.0.1:5500/index.html";
     localStorage.clear();
 })
@@ -49,11 +50,6 @@ for(let i = 1; i <= 12; i++) {
     option.innerText = i;
     form.selectMonth.appendChild(option);
 }
-
-// function monthOption() {
-//     const monthSelect = selectMonthValue.options[selectMonthValue.selectedIndex].value;
-//     console.log(monthSelect);
-// }
 // select del año dinamicamente
 
 // guardamos el año actual dentro de una variable
@@ -65,11 +61,6 @@ for(let i = currentYear; i <= currentYear + 8; i++) {
     option.innerText = i;
     form.selectYear.appendChild(option);
 }
-
-// function yearOption() {
-//     const yearSelect = selectYearValue.options[selectYearValue.selectedIndex].value;
-//     console.log(yearSelect);
-// }
 
 //select de cuotas
 const totalBuy = JSON.parse(localStorage.getItem("total"));
@@ -84,12 +75,7 @@ for(let i = 0; i < optionsCuotas.length; i++) {
     option.value = i;
     option.innerText = `${optionsCuotas[i]} pagos de $${precioTotalCuotas.toFixed(2)}`;
     form.selectDues.appendChild(option);
-}
-
-// function duesOption() {
-//     const duesSelect = selectDuesValue.options[selectDuesValue.selectedIndex].textContent;
-//     console.log(duesSelect);
-// }       
+}     
 
 // numero de tarjeta
 form.inputNumber.addEventListener("keyup", (e) => {
@@ -195,6 +181,7 @@ const sendForm = (e) => {
                 `)
             }
             // solucionar que al expandirse el formulario deje enviar los datos
+            // usando sweetalert2 sino usar un alert 
         };
     // hacer que al apretar se guarde en un array la info del formulario
     // y que le muestre un mensaje que la compra fue realizada correctamente

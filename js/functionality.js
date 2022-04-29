@@ -150,17 +150,6 @@ btnPay.addEventListener("click", () => {
   const becomeJson = JSON.stringify(totalCard);
   localStorage.setItem("total", becomeJson);
   console.log(localStorage);
-  // fetch('./totalPrice.json', {
-  //   method: "POST",
-  //   body: JSON.stringify({
-  //     precio: totalCard.textContent,
-  //   }),
-  //   headers: {
-  //     "Content-type": "aplication/json"
-  //   },
-  // })
-  // .then((res) => res.json())
-  // .then((data) => console.log(data))
 });
 
 
